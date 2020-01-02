@@ -1,0 +1,10 @@
+// Shell script Example statement //
+
+1. Create bulk users using shell script
+2. Script to check if server is alive
+3. Script to know when user logs in
+4. How to automate DB backup
+5. How to replace any pattern within file without opening it.
+6. Server A server B file comparision and copying missing files.
+7. Monitor service logs in logfile for multiple services and if service is stoped send email notification
+8. If build is failed I should know about why it is failed instead of going at console output
