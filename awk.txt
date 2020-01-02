@@ -1,0 +1,10 @@
+# To print 1st column
+awk '{print $1F}' filename
+# To print last column
+awk '{print $NF}' filename
+# To print table with row number
+awk '{print NR,$0}' filename
+# To print 1st element of table
+awk 'NR==1{print $1F}' filename
+# To print last line of file
+awk 'END{print}' file

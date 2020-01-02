@@ -1,0 +1,58 @@
+// Let’s start with File Spacing
+
+#Insert one blank line after each line –
+sed G filename
+#To insert two blank lines –
+sed 'G;G' filename
+#Delete blank lines and insert one blank line after each line –
+sed '/^$/d;G' filename
+
+// Deleting lines
+
+1 – Delete a particular line –
+Syntax: sed ‘nd’ filename
+2 – Delete the last line
+sed ‘$d’ filename
+3 – Delete line from range x to y
+Syntax: sed ‘x,yd’ filename
+5 – Delete the patter matching line –
+Syntax: sed ‘/pattern/d’ filename
+6 – Delete lines starting from nth line and every 2nd line from there –
+Syntax: sed ‘n~2d’ filename
+8 – Delete blank Lines
+sed '/^$/d' filename
+
+// View/Print the files
+1 – Viewing a file from x to y range –
+Syntax: sed -n ‘x,yp’ filename
+2 – View the entire file except the given range –
+Syntax: sed ‘x,yd’ filename
+3 – Print nth line of the file –
+Syntax: sed -n ‘address’p filename
+4 – Print lines from xth line to yth line.
+Syntax: sed -n ‘x,y’p filename
+5 – Print only the last line –
+Syntax: sed -n ‘$’p filename
+6 – Print from nth line to end of file –
+Syntax: sed -n ‘n,$p’ filename
+Pattern Printing
+7 – Print the line only which matches the pattern –
+Syntax: sed -n /pattern/p filename
+
+// # Replacement with the sed command
+
+1 – Change the first occurrence of the pattern –
+[root@rhel7 ~]# sed 's/life/leaves/' a.txt
+2 – Replacing the nth occurrence of a pattern in a line –
+Syntax: sed ‘s/old_pattern/new_pattern/n’ filename
+3 – Replacing all the occurrence of the pattern in a line.
+[root@rhel7 ~]# sed 's/life/learn/g' a.txt
+4 – Replace pattern from nth occurrence to all occurrences in a line.
+Syntax: sed ‘s/old_pattern/new_pattern/ng’ filename
+5 – Replacing pattern on a specific line number. Here, “m” is the line number.
+Syntax: sed ‘m s/old_pattern/new_pattern/’ filename
+Example :
+[root@rhel7 ~]# sed '3 s/every/each/' a.txt
+6 – Replace string on a defined range of lines –
+Syntax: sed ‘x,y s/old_pattern/new_pattern/’ filename
+
