@@ -8,3 +8,8 @@
 6. Server A server B file comparision and copying missing files.
 7. Monitor service logs in logfile for multiple services and if service is stoped send email notification
 8. If build is failed I should know about why it is failed instead of going at console output
+
+
+
+// links //
+https://www.techbeamers.com/20-shell-scripting-questions-answers/

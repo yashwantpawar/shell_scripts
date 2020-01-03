@@ -6,4 +6,6 @@ for i in $( cat users.txt ); do
     echo "Password for user $i changed successfully"
 done
 
+
+
 #https://unix.stackexchange.com/questions/419063/how-to-create-user-and-password-in-one-script-for-100-users
